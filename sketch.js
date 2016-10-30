@@ -3,7 +3,7 @@ var flowers = [];
 var drops = [];
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(1000,600);
   ship = new Ship();
   // drop = new Drop(width/2, height/2);
   for (var i = 0; i < 6; i++) {
@@ -25,6 +25,16 @@ function draw() {
         drops[i].evaporate();
       }
     }
+    var temp = 0
+    for ( j = 0; j < flowers.length; j++) {
+        if(flowers[j].y < 0){
+          temp++;
+        }
+    }
+    if(temp == 6){
+            text("CLEAR",500,300)
+    }
+    
   }
 
   var edge = false;
