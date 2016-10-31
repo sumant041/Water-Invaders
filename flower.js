@@ -23,7 +23,9 @@ function Flower(x, y) {
     
     if(this.y >= 600){
       console.log("Game over");
-      text("Game over",500,300)
+      textSize(24);
+            text("Oops,! Game Over",350,300)
+      
     }
 
   }
