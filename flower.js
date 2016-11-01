@@ -23,7 +23,7 @@ function Flower(x, y) {
     
     if(this.y >= 600){
       console.log("Game over");
-      text("Game over",500,300)
+      text("Oops! Game over",380,300);
     }
 
   }
