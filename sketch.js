@@ -32,7 +32,8 @@ function draw() {
         }
     }
     if(temp == 6){
-            text("CLEAR",500,300)
+         text(28);
+            text("Alas! You made d ballons fly away",380,300);
     }
     
   }
