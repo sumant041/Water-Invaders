@@ -1,9 +1,22 @@
 var ship;
 var flowers = [];
 var drops = [];
+var score = 0;
+var music;
+
+function preload() {
+ music =  loadSound("sounds/Music/Music-01.mp3");
+}
+
+function drawScore() {
+    textSize(20);  
+    fill(57,255,20);
+    text("Score " + score,10,30);
+  }
 
 function setup() {
   createCanvas(1000,600);
+  music.play();
   ship = new Ship();
   // drop = new Drop(width/2, height/2);
   for (var i = 0; i < 6; i++) {
@@ -15,6 +28,7 @@ function draw() {
   background(51);
   ship.show();
   ship.move();
+  drawScore();
 
   for (var i = 0; i < drops.length; i++) {
     drops[i].show();
